@@ -1,0 +1,489 @@
+<html><head>
+<meta charset="utf-8"/>
+<link crossorigin="" href="https://fonts.gstatic.com/" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?display=swap&family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700" onload="this.rel='stylesheet'" rel="stylesheet"/>
+<title>Twinkle Kaushik</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpolygon points='24,4 44,24 24,44 4,24' fill='%238b5cf6'/%3E%3C/svg%3E"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style type="text/tailwindcss">
+      :root {
+        --primary-color: #5732ae;         /* Vibrant purple */
+        --secondary-color: #f3f4f6;       /* Light gray */
+        --accent-color: #ad79ec;          /* Blue accent */
+        --background-color: #faf8ff;      /* Very light purple tint */
+        --text-color: #1e1b4b;            /* Deep indigo */
+        --muted-text-color: #616161;      /* Muted indigo */
+        --light-pink: #ede9fe;            /* Light purple */
+        --soft-purple: #ddd6fe;           /* Soft purple */
+      }
+      .nav-link {
+        color: var(--text-color);
+        font-size: 1rem;
+        font-weight: 500;
+        line-height: 1.5;
+        transition: color 0.2s;
+      }
+      .nav-link:hover {
+        color: var(--primary-color);
+      }
+      .section-title {
+        color: var(--text-color);
+        font-size: 1.875rem;
+        font-weight: 700;
+        line-height: 2.25rem;
+        letter-spacing: -0.015em;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        padding-bottom: 1rem;
+        padding-top: 2rem;
+        position: relative;
+      }
+      .section-title::after {
+        content: '';
+        position: absolute;
+        bottom: 0.5rem;
+        left: 1rem;
+        width: 3rem;
+        height: 0.25rem;
+        background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        border-radius: 2px;
+      }
+      .icon-button {
+        display: flex;
+        max-width: 480px;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        border-radius: 0.5rem;
+        height: 2.5rem;
+        background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+        color: white;
+        gap: 0.5rem;
+        font-size: 0.875rem;
+        font-weight: 600;
+        line-height: 1.5;
+        letter-spacing: 0.015em;
+        min-width: 0;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        transition: all 0.2s;
+        box-shadow: 0 4px 6px -1px rgba(139, 92, 246, 0.1);
+      }
+      .icon-button:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 10px 15px -3px rgba(139, 92, 246, 0.2);
+        background: linear-gradient(135deg, var(--accent-color), var(--primary-color));
+      }
+      .project-card {
+        display: flex;
+        height: 100%;
+        flex: 1 1 0%;
+        flex-direction: column;
+        gap: 1rem;
+        border-radius: 1rem;
+        min-width: 18rem;
+        background: linear-gradient(135deg, var(--light-pink), var(--soft-purple));
+        overflow: hidden;
+        box-shadow: 0 4px 6px -1px rgba(139, 92, 246, 0.08);
+        transition: all 0.3s;
+        border: 1px solid rgba(139, 92, 246, 0.08);
+      }
+      .project-card:hover {
+        box-shadow: 0 20px 25px -5px rgba(139, 92, 246, 0.15);
+        transform: translateY(-4px);
+      }
+      .skill-badge {
+        display: flex;
+        height: 2.5rem;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        border-radius: 9999px;
+        background: linear-gradient(135deg, var(--light-pink), var(--soft-purple));
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+        font-size: 0.875rem;
+        font-weight: 500;
+        line-height: 1.5;
+        color: var(--text-color);
+        transition: all 0.2s;
+        border: 1px solid rgba(139, 92, 246, 0.08);
+      }
+      .skill-badge:hover {
+        background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+        color: white;
+        transform: translateY(-1px);
+      }
+      .gradient-text {
+        background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+    </style>
+</head>
+<body class="bg-[var(--background-color)]" style='font-family: "Poppins", "Inter", sans-serif;'>
+<div class="relative flex size-full min-h-screen flex-col group/design-root overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col pt-56px">
+<header class="fixed top-0 left-0 right-0 z-50 flex items-center justify-between whitespace-nowrap border-b border-solid border-b-violet-100 bg-white bg-opacity-95 px-10 py-3 backdrop-blur-md shadow-sm">
+<a href="index.html" class="flex items-center gap-4 text-[var(--text-color)] hover:text-[var(--primary-color)] transition-colors">
+  <div class="size-6 text-[var(--primary-color)]">
+    <!-- ...SVG logo as in index.html... -->
+    <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="24,4 44,24 24,44 4,24" fill="currentColor" stroke="currentColor" stroke-width="2"/>
+      <polygon points="24,10 38,24 24,38 10,24" fill="white" fill-opacity="0.3"/>
+    </svg>
+  </div>
+  <h2 class="text-[var(--text-color)] text-xl font-bold leading-tight tracking-[-0.015em]">Twinkle's Portfolio</h2>
+</a>
+<nav class="flex flex-1 justify-end gap-8">
+<div class="flex items-center gap-9">
+<a class="nav-link" href="#about">About</a>
+<a class="nav-link" href="#skills">Skills</a>
+<a class="nav-link" href="project.html">Projects</a>
+<a class="nav-link" href="#internships">Internships</a>
+<a class="nav-link" href="#contact">Contact</a>
+</div>
+<div class="flex gap-3">
+<a aria-label="GitHub Profile" class="icon-button" href="https://github.com/twin007" target="_blank" rel="noopener noreferrer">
+<div class="text-white" data-icon="GithubLogo" data-size="20px" data-weight="regular">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M208.31,75.68A59.78,59.78,0,0,0,202.93,28,8,8,0,0,0,196,24a59.75,59.75,0,0,0-48,24H124A59.75,59.75,0,0,0,76,24a8,8,0,0,0-6.93,4,59.78,59.78,0,0,0-5.38,47.68A58.14,58.14,0,0,0,56,104v8a56.06,56.06,0,0,0,48.44,55.47A39.8,39.8,0,0,0,96,192v8H72a24,24,0,0,1-24-24A40,40,0,0,0,8,136a8,8,0,0,0,0,16,24,24,0,0,1,24,24,40,40,0,0,0,40,40H96v16a8,8,0,0,0,16,0V192a24,24,0,0,1,48,0v40a8,8,0,0,0,16,0V192a39.8,39.8,0,0,0-8.44-24.53A56.06,56.06,0,0,0,216,112v-8A58.14,58.14,0,0,0,208.31,75.68ZM200,112a40,40,0,0,1-40,40H112a40,40,0,0,1-40-40v-8a41.74,41.74,0,0,1,6.9-22.48A8,8,0,0,0,80,73.83a43.81,43.81,0,0,1,.79-33.58,43.88,43.88,0,0,1,32.32,20.06A8,8,0,0,0,119.82,64h32.35a8,8,0,0,0,6.74-3.69,43.87,43.87,0,0,1,32.32-20.06A43.81,43.81,0,0,1,192,73.83a8.09,8.09,0,0,0,1,7.65A41.72,41.72,0,0,1,200,104Z"></path>
+</svg>
+</div>
+</a>
+<a aria-label="LinkedIn Profile" class="icon-button" href="https://linkedin.com/in/twinkle-kaushik-7k" target="_blank" rel="noopener noreferrer">
+<div class="text-white" data-icon="LinkedinLogo" data-size="20px" data-weight="regular">
+<svg fill="currentColor" height="20px" viewBox="0 0 256 256" width="20px" xmlns="http://www.w3.org/2000/svg">
+<path d="M216,24H40A16,16,0,0,0,24,40V216a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V40A16,16,0,0,0,216,24Zm0,192H40V40H216V216ZM96,112v64a8,8,0,0,1-16,0V112a8,8,0,0,1,16,0Zm88,28v36a8,8,0,0,1-16,0V140a20,20,0,0,0-40,0v36a8,8,0,0,1-16,0V112a8,8,0,0,1,15.79-1.78A36,36,0,0,1,184,140ZM100,84A12,12,0,1,1,88,72,12,12,0,0,1,100,84Z"></path>
+</svg>
+</div>
+</a>
+<a aria-label="Tableau Public Profile" class="icon-button flex items-center justify-center" href="https://public.tableau.com/app/profile/twinkle.kaushik" target="_blank" rel="noopener noreferrer">
+  <span class="tableau-logo">
+    <img src="https://img.icons8.com/color/512/tableau-software.png" alt="Tableau Public Logo" width="20" height="20" style="display:inline-block;vertical-align:middle;">
+  </span>
+</a>
+</div>
+</nav>
+</header>
+<div class="layout-container flex h-full grow flex-col pt-[56px]">
+<main class="flex flex-1 justify-center py-5">
+<div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+<section class="@container" id="hero">
+<div class="@[480px]:p-4">
+  <div class="relative flex min-h-[calc(100vh-120px)] flex-col gap-6 @[480px]:gap-8 @[480px]:rounded-xl items-center justify-center p-4 overflow-hidden">
+    <!-- Big Animated SVG Diamonds on Sides -->
+    <svg class="absolute left-[-0px] top-[10%] w-32 h-32 animate-bounce-slow z-0 opacity-90 select-none pointer-events-none" viewBox="0 0 64 64" fill="none">
+      <polygon points="32,4 60,32 32,60 4,32" fill="#ede9fe" stroke="#8b5cf6" stroke-width="2"/>
+      <polygon points="32,12 52,32 32,52 12,32" fill="#ddd6fe" stroke="#6366f1" stroke-width="1"/>
+    </svg>
+    <svg class="absolute right-[-0px] bottom-[8%] w-28 h-28 animate-bounce-slow z-0 opacity-80 select-none pointer-events-none" style="animation-delay: 1.7s;" viewBox="0 0 64 64" fill="none">
+      <polygon points="32,4 60,32 32,60 4,32" fill="#ede9fe" stroke="#8b5cf6" stroke-width="2"/>
+    </svg>
+    <!-- ...existing hero content... -->
+    <div class="flex flex-col gap-3 text-center z-10">
+      <h1 class="text-[var(--text-color)] text-5xl font-bold leading-tight tracking-tight @[480px]:text-7xl @[480px]:font-bold @[480px]:leading-tight @[480px]:tracking-tight">
+        <span id="typing-hero" class="gradient-text"></span><span id="typing-cursor" class="animate-pulse text-[var(--primary-color)]">|</span>
+      </h1>
+      <h2 class="text-[var(--muted-text-color)] text-lg font-medium leading-normal @[480px]:text-xl @[480px]:font-medium @[480px]:leading-normal">
+        Creative | Innovative | Passionate
+      </h2>
+    </div>
+    <a
+      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-full h-12 px-8 @[480px]:h-14 @[480px]:px-10 bg-gradient-to-r from-[var(--primary-color)] to-[var(--accent-color)] text-white text-base font-semibold leading-normal tracking-[0.015em] @[480px]:text-lg @[480px]:font-semibold @[480px]:leading-normal @[480px]:tracking-[0.015em] hover:shadow-lg transition-all duration-300 hover:transform hover:scale-105 z-10"
+      href="/project.html"
+    >
+      <span class="truncate">Explore My Work</span>
+    </a>
+  </div>
+</div>
+</section>
+<section class="py-5 scroll-mt-20" id="about">
+<h2 class="section-title">About Me</h2>
+<p class="text-[var(--muted-text-color)] text-lg font-normal leading-relaxed pb-3 pt-1 px-4" style="text-align: justify;">
+  Hi, I’m <strong>Twinkle Kaushik</strong> — a data enthusiast who believes that behind every chart lies a story waiting to be told.<br><br>
+  What drew me to the world of data? Honestly, it’s the thrill of the end result — watching messy datasets transform into clear, meaningful insights that empower better decisions. Whether I’m building dashboards, training models, or scrubbing raw data into shape, I love the moment when it all clicks — and I can help others truly “see” the data.<br><br>
+  I’m especially passionate about using data for good, with a keen interest in <strong>healthcare</strong> and <strong>education</strong>. From exploring patterns in public health to designing dashboards that help teachers and students thrive — I aim to bring clarity where it matters most.<br><br>
+  I live by the motto: <em>“Everything happens for a reason.”</em> And in data? That reason is often measurable.<br><br>
+  Currently open to full-time opportunities where I can solve problems, visualize outcomes, and keep learning every day. Let’s turn numbers into narratives together.
+</p>
+
+</section>
+
+<section class="py-5 scroll-mt-20" id="skills">
+<h2 class="section-title">Skills</h2>
+<div class="flex gap-3 p-4 flex-wrap">
+<div class="skill-badge">Python</div>
+<div class="skill-badge">Data Analysis</div>
+<div class="skill-badge">Data Visualization (Tableau)</div>
+<div class="skill-badge">Machine Learning</div>
+<div class="skill-badge">Database Management (SQL, MySQL)</div>
+<div class="skill-badge">Artificial Intelligence</div>
+<div class="skill-badge">Frontend Dev (HTML, Bootstrap)</div>
+<div class="skill-badge">Backend Dev (Django)</div>
+<div class="skill-badge">Excel</div>
+</div>
+</section>
+
+<section class="py-10 scroll-mt-20" id="internships">
+<h2 class="section-title">Internships</h2>
+<div class="relative px-4 py-8">
+  <div class="absolute left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-[var(--primary-color)] to-[var(--accent-color)] opacity-30 rounded-full"></div>
+  <div class="space-y-10 relative z-10">
+    <!-- Internship 1 -->
+    <div class="flex items-start gap-6 group">
+      <div class="flex-shrink-0 flex flex-col items-center">
+        <div class="h-12 w-12 rounded-full bg-gradient-to-br from-[var(--primary-color)] to-[var(--accent-color)] flex items-center justify-center shadow-lg border-4 border-white">
+          <svg fill="currentColor" height="28" width="28" viewBox="0 0 256 256"><path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"></path></svg>
+        </div>
+        <div class="h-full w-1 bg-gradient-to-b from-[var(--primary-color)] to-[var(--accent-color)] opacity-30"></div>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg border border-violet-100 p-6 flex-1 hover:shadow-2xl transition-all duration-300">
+        <p class="text-[var(--primary-color)] text-base font-semibold mb-1">
+          Data Science Intern – Delhi e-Governance Society, Govt. of NCT Delhi
+        </p>
+        <p class="text-[var(--text-color)] text-lg font-bold mb-1">
+          Jun – Aug 2025
+        </p>
+        <ul class="list-disc pl-5 text-[var(--muted-text-color)] text-base mb-1">
+          <li>Analyzed public service datasets using Excel and Tableau.</li>
+          <li>Developed EDA pipelines and predictive models in Python to generate real-time insights.</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Internship 2 -->
+    <div class="flex items-start gap-6 group">
+      <div class="flex-shrink-0 flex flex-col items-center">
+        <div class="h-12 w-12 rounded-full bg-gradient-to-br from-[var(--primary-color)] to-[var(--accent-color)] flex items-center justify-center shadow-lg border-4 border-white">
+          <svg fill="currentColor" height="28" width="28" viewBox="0 0 256 256"><path d="M221.69,199.77,160,96.92V40h8a8,8,0,0,0,0-16H88a8,8,0,0,0,0,16h8V96.92L34.31,199.77A16,16,0,0,0,48,224H208a16,16,0,0,0,13.72-24.23ZM110.86,103.25A7.93,7.93,0,0,0,112,99.14V40h32V99.14a7.93,7.93,0,0,0,1.14,4.11L183.36,167c-12,2.37-29.07,1.37-51.75-10.11-15.91-8.05-31.05-12.32-45.22-12.81ZM48,208l28.54-47.58c14.25-1.74,30.31,1.85,47.82,10.72,19,9.61,35,12.88,48,12.88a69.89,69.89,0,0,0,19.55-2.7L208,208Z"></path></svg>
+        </div>
+        <div class="h-full w-1 bg-gradient-to-b from-[var(--primary-color)] to-[var(--accent-color)] opacity-30"></div>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg border border-violet-100 p-6 flex-1 hover:shadow-2xl transition-all duration-300">
+        <p class="text-[var(--primary-color)] text-base font-semibold mb-1">
+          Research Data Analyst Intern – MR Impact Internship
+        </p>
+        <p class="text-[var(--text-color)] text-lg font-bold mb-1">
+          Feb – May 2025
+        </p>
+        <ul class="list-disc pl-5 text-[var(--muted-text-color)] text-base mb-1">
+          <li>Collaborated with PhD scholars to analyze research data using Python and visualization tools.</li>
+          <li>Designed few Sales Dashboards using Tableau.</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Internship 3 -->
+    <div class="flex items-start gap-6 group">
+      <div class="flex-shrink-0 flex flex-col items-center">
+        <div class="h-12 w-12 rounded-full bg-gradient-to-br from-[var(--primary-color)] to-[var(--accent-color)] flex items-center justify-center shadow-lg border-4 border-white">
+          <svg fill="currentColor" height="28" width="28" viewBox="0 0 256 256"><path d="M216,56H176V48a24,24,0,0,0-24-24H104A24,24,0,0,0,80,48v8H40A16,16,0,0,0,24,72V200a16,16,0,0,0,16,16H216a16,16,0,0,0,16-16V72A16,16,0,0,0,216,56ZM96,48a8,8,0,0,1,8-8h48a8,8,0,0,1,8,8v8H96ZM216,72v41.61A184,184,0,0,1,128,136a184.07,184.07,0,0,1-88-22.38V72Zm0,128H40V131.64A200.19,200.19,0,0,0,128,152a200.25,200.25,0,0,0,88-20.37V200ZM104,112a8,8,0,0,1,8-8h32a8,8,0,0,1,0,16H112A8,8,0,0,1,104,112Z"></path></svg>
+        </div>
+      </div>
+      <div class="bg-white rounded-xl shadow-lg border border-violet-100 p-6 flex-1 hover:shadow-2xl transition-all duration-300">
+        <p class="text-[var(--primary-color)] text-base font-semibold mb-1">
+          Data Analytics Intern – IBM SkillsBuild
+        </p>
+        <p class="text-[var(--text-color)] text-lg font-bold mb-1">
+          Jun – Aug 2024
+        </p>
+        <ul class="list-disc pl-5 text-[var(--muted-text-color)] text-base mb-1">
+          <li>Worked on Education Equality project aligned with UN SDGs.</li>
+          <li>Used Power BI and Python libraries to explore and visualize data.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="py-10 scroll-mt-20" id="contact">
+<h2 class="section-title">Contact Me</h2>
+<div class="flex justify-center items-center px-4 pb-10">
+  <div class="w-full max-w-3xl bg-white/80 rounded-3xl shadow-2xl border border-pink-100 p-0 md:p-0 flex flex-col md:flex-row overflow-hidden">
+    <!-- Left: Info & Illustration -->
+    <div class="hidden md:flex flex-col justify-center items-center bg-gradient-to-br from-[var(--primary-color)] to-[var(--accent-color)] p-8 w-1/2 relative">
+      <div class="absolute top-4 right-4 opacity-10 pointer-events-none select-none">
+        <svg width="120" height="120" fill="none" viewBox="0 0 120 120">
+          <circle cx="60" cy="60" r="56" stroke="#fff" stroke-width="8"/>
+        </svg>
+      </div>
+      <div class="mb-6">
+        <svg width="56" height="56" fill="none" viewBox="0 0 24 24" class="text-white drop-shadow-lg">
+          <rect x="2" y="4" width="20" height="16" rx="4" fill="white" fill-opacity="0.15"/>
+          <path d="M22 6 12 13 2 6" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="text-white text-lg font-semibold mb-2">Let's Connect!</div>
+      <div class="text-white/80 text-sm mb-6 text-center">Feel free to reach out for collaborations, project ideas, or just to say hi.</div>
+      <div class="flex flex-col gap-2 text-white/90 text-sm">
+        <div class="flex items-center gap-2">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.72 19.72 0 0 1 3.08 4.18 2 2 0 0 1 5 2h3a2 2 0 0 1 2 1.72c.13 1.05.37 2.07.72 3.05a2 2 0 0 1-.45 2.11l-1.27 1.27a16 16 0 0 0 6.29 6.29l1.27-1.27a2 2 0 0 1 2.11-.45c.98.35 2 .59 3.05.72A2 2 0 0 1 22 16.92z"/></svg>
+          <a href="tel:+91-9667025332" class="no-underline hover:text-white hover:font-semibold transition">+91 9667025332</a>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="16" rx="2" stroke="none"/><polyline points="22,6 12,13 2,6" /></svg>
+          <a href="mailto:7.twinklesharma@gmail.com" class="no-underline hover:text-white hover:font-semibold transition">7.twinklesharma@gmail.com</a>
+        </div>
+      </div>
+    </div>
+    <!-- Right: Form -->
+    <form
+      class="flex-1 flex flex-col justify-center p-8 gap-6"
+      action="https://formspree.io/f/mzzvvnnq"
+      method="POST"
+      id="contactForm"
+      autocomplete="off"
+    >
+      <div class="text-2xl font-bold text-[var(--primary-color)] mb-2 md:hidden">Let's Connect!</div>
+      <div class="flex flex-col gap-4">
+        <label class="flex flex-col gap-1">
+          <span class="text-sm font-medium text-[var(--muted-text-color)]">Your Name</span>
+          <input
+            class="form-input w-full rounded-lg text-[var(--text-color)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] border border-[var(--secondary-color)] bg-[var(--secondary-color)] focus:border-[var(--primary-color)] h-12 placeholder:text-[var(--accent-color)] p-3 text-base font-normal leading-normal shadow-sm"
+            placeholder="Your Name"
+            name="name"
+            required
+          />
+        </label>
+        <label class="flex flex-col gap-1">
+          <span class="text-sm font-medium text-[var(--muted-text-color)]">Your Email</span>
+          <input
+            class="form-input w-full rounded-lg text-[var(--text-color)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] border border-[var(--secondary-color)] bg-[var(--secondary-color)] focus:border-[var(--primary-color)] h-12 placeholder:text-[var(--accent-color)] p-3 text-base font-normal leading-normal shadow-sm"
+            placeholder="Your Email"
+            type="email"
+            name="email"
+            required
+          />
+        </label>
+        <label class="flex flex-col gap-1">
+          <span class="text-sm font-medium text-[var(--muted-text-color)]">Your Message</span>
+          <textarea
+            class="form-input w-full rounded-lg text-[var(--text-color)] focus:outline-none focus:ring-2 focus:ring-[var(--primary-color)] border border-[var(--secondary-color)] bg-[var(--secondary-color)] focus:border-[var(--primary-color)] min-h-32 placeholder:text-[var(--accent-color)] p-3 text-base font-normal leading-normal shadow-sm"
+            placeholder="Your Message"
+            rows="5"
+            name="message"
+            required
+          ></textarea>
+        </label>
+      </div>
+      <div class="flex justify-end">
+        <button
+          class="flex items-center gap-2 px-6 py-3 rounded-full bg-gradient-to-r from-[var(--primary-color)] to-[var(--accent-color)] text-white font-bold text-base shadow-lg hover:scale-105 transition-transform"
+          type="submit"
+        >
+          <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 2 11 13" /><path d="M22 2 15 22 11 13 2 9l20-7z"/></svg>
+          Send Message
+        </button>
+      </div>
+      <p id="formSuccess" class="hidden text-green-500 font-medium mt-2">Thank you! Your message has been sent.</p>
+      <p id="formError" class="hidden text-red-500 font-medium mt-2">Sorry, there was a problem sending your message.</p>
+    </form>
+  </div>
+</div>
+</section>
+</div>
+</main>
+<footer class="border-t border-solid border-t-[var(--secondary-color)] px-10 py-6 text-center">
+<p class="text-sm text-[var(--muted-text-color)]">© 2025 Twinkle Kaushik. All rights reserved.</p>
+</footer>
+</div>
+</div>
+<script>
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+          });
+        });
+      });
+    </script>
+<script>
+  // Smooth scroll code remains unchanged
+
+  // Contact form AJAX submission to prevent redirect
+  document.addEventListener('DOMContentLoaded', function () {
+    const form = document.getElementById('contactForm');
+    const successMsg = document.getElementById('formSuccess');
+    const errorMsg = document.getElementById('formError');
+    if (form) {
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        successMsg.classList.add('hidden');
+        errorMsg.classList.add('hidden');
+        const formData = new FormData(form);
+        fetch(form.action, {
+          method: 'POST',
+          body: formData,
+          headers: { 'Accept': 'application/json' }
+        })
+        .then(response => {
+          if (response.ok) {
+            form.reset();
+            successMsg.classList.remove('hidden');
+          } else {
+            errorMsg.classList.remove('hidden');
+          }
+        })
+        .catch(() => {
+          errorMsg.classList.remove('hidden');
+        });
+      });
+    }
+
+    const text = "Twinkle Kaushik";
+    const typingEl = document.getElementById('typing-hero');
+    const cursorEl = document.getElementById('typing-cursor');
+    let idx = 0;
+    let typing = true;
+    let pause = false;
+
+    function typeLoop() {
+      if (!typingEl) return;
+
+      if (typing) {
+        typingEl.textContent = text.slice(0, idx);
+        idx++;
+        if (idx > text.length) {
+          typing = false;
+          pause = true;
+          setTimeout(typeLoop, 1200); // Pause after typing
+        } else {
+          setTimeout(typeLoop, 120);
+        }
+      } else {
+        if (pause) {
+          pause = false;
+          setTimeout(typeLoop, 400); // Short pause before erasing
+        } else {
+          idx--;
+          typingEl.textContent = text.slice(0, idx);
+          if (idx === 0) {
+            typing = true;
+            setTimeout(typeLoop, 600); // Pause before typing again
+          } else {
+            setTimeout(typeLoop, 60);
+          }
+        }
+      }
+    }
+
+    typeLoop();
+
+  });
+</script>
+<style>
+@keyframes bounce-slow {
+  0%, 100% { transform: translateY(0) scale(1) rotate(-5deg);}
+  50% { transform: translateY(-24px) scale(1.08) rotate(5deg);}
+}
+.animate-bounce-slow {
+  animation: bounce-slow 4.5s infinite;
+}
+</style>
+</body></html>
