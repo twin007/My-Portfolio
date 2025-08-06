@@ -1,8 +1,8 @@
 # 👋 Hello, I'm Twinkle Kaushik!
 
 <div align="center">
-  <img src="https://i.ibb.co/LXPbz1KH/portfolio-banner.gif" alt="Portfolio Banner" width="800"/>
-
+  <img src="https://i.ibb.co/RpYxpdRC/Twinkle.png" alt="Portfolio Banner" width="800"/>
+  
   [![GitHub followers](https://img.shields.io/github/followers/twin007?style=social)](https://github.com/twin007)
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue)](https://linkedin.com/in/twinkle-kaushik-7k)
   [![Tableau Public](https://img.shields.io/badge/Tableau-Profile-orange)](https://public.tableau.com/app/profile/twinkle.kaushik)
